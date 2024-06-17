@@ -43,16 +43,6 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String args[]) {
 		
-		
-		/*A FAZER
-		 * 
-		 * Excluir e Editar objeto
-		 * 
-		 * Testar
-		 * 
-		 */
-
-		
 		Paciente paciente1 = new Paciente(null, null, null, null, null);
 		Medico medico1 = new Medico(null, null, null, null, null);
 		Procedimento proced1 = new Procedimento(null, null, 0);
@@ -111,7 +101,7 @@ public class Main {
 					
 					boolean edit = paciente1.editaPaciente(nomePessoa);
 					
-					if(!edit) {
+					if(edit) {
 						System.out.print("Digite seu Nome Completo: ");
 						paciente1.setNome(leitor.next());
 						System.out.print("Digite seu CPF: ");
@@ -169,7 +159,7 @@ public class Main {
 					
 					boolean edit = medico1.editaMedico(nomePessoa);;
 					
-					if(!edit) {
+					if(edit) {
 						System.out.print("Digite seu Nome Completo: ");
 						medico1.setNome(leitor.next());
 						System.out.print("Digite seu CPF: ");
@@ -224,7 +214,7 @@ public class Main {
 					
 					boolean edit = proced1.editaProcedimento(nomeProc);
 					
-					if(!edit) {
+					if(edit) {
 						System.out.print("Digite o nome do Procedimento: ");
 						proced1.setNome(leitor.next());
 						System.out.print("Descreva o Procedimento: ");
@@ -275,7 +265,7 @@ public class Main {
 					
 					boolean edit = consult1.editaAgendamento(dataConsulta);
 					
-					if(!edit) {
+					if(edit) {
 						System.out.print("Nome do Paciente: ");
 						String nomePaciente = leitor.next();
 						System.out.print("Nome do Médico: ");

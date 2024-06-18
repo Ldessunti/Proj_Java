@@ -1,6 +1,6 @@
 
 public abstract class Pessoa {
-	protected String nome;
+	private String nome;
 	private String cpf;
 	private String telefone;
 	private String email;
@@ -11,6 +11,8 @@ public abstract class Pessoa {
 		this.telefone = telefone;
 		this.email = email;
 	}
+	
+	public abstract void getDetalhes();
 	
 	public String getNome() {
 		return nome;
@@ -42,7 +44,4 @@ public abstract class Pessoa {
 	public String toString() {
 		return  "\n" + "\nNome: " + nome + "\nCPF: " + cpf + "\nTelefone: " + telefone + "\nEmail: " + email;
 	}
-	
-	
-	
 }

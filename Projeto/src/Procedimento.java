@@ -24,7 +24,7 @@ public class Procedimento {
 		}
 		if(!repetido) {
 			//Add Procedimento
-			procedimentos.add(proced1);
+			procedimentos.add(new Procedimento(getNome(), getDescricao(), getPreco()));
 			System.out.println(proced1.getNome() + " foi cadastrado com sucesso!");
 		}else {
 			System.out.println("Procedimento já cadastrado!");
@@ -96,11 +96,4 @@ public class Procedimento {
 		return "\n" + "\nNome" + nome + "\nDescricao" + descricao + "\nPreco" + preco 
 			 + "____________________________________";
 	}
-
-	
-	
-	
-
-	
-	
 }

@@ -12,6 +12,10 @@ public class Medico extends Pessoa{
 		this.especializacao = especializacao;
 	}
 	
+	public void getDetalhes() {
+		pessoasm.toString();
+	}
+	
 	public void cadastraMedico(Medico medico1){	
 		//Valida se Medico já esta adicionado
 		boolean repetido = false;
@@ -22,7 +26,7 @@ public class Medico extends Pessoa{
 		}
 		if(!repetido) {
 			//Add Medico
-			pessoasm.add(medico1);
+			pessoasm.add(new Medico(getNome(), getCpf(), getTelefone(), getEmail(), getEspecializacao()));
 			System.out.println(medico1.getNome() + " foi cadastrado com sucesso!");
 		}else {
 			System.out.println("Médico já cadastrado!");
@@ -53,7 +57,7 @@ public class Medico extends Pessoa{
 	public boolean editaMedico(String nomePessoa) {
 		boolean flag = false;
         for (Pessoa m : pessoasm) {
-            if (m.getNome() == nome) {
+            if (m.getNome() == getNome()) {
                 flag = true;
             }
         }

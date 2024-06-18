@@ -1,53 +1,13 @@
-/*
-
-Pessoa: Classe abstrata que serve como base para Paciente e Médico.
-Atributos: nome, cpf, telefone, email
-
-Paciente: Extende a classe Pessoa e armazena informações sobre os pacientes.
-Atributos: endereco
-Métodos:
-cadastraPaciente
-listaPaciente
-editaPaciente
-removePaciente
-
-
-Médico: Extende a classe Pessoa e armazena informações sobre os médicos.
-Atributos: especialidade
-Métodos:
-cadastraMedico
-listaMedico
-editaMedico
-removeMedico
-
-Consulta: Gerencia os agendamentos e detalhes das consultas.
-Atributos: data, paciente, medico
-Métodos:
-cadastraConsulta
-listaConsulta
-editaConsulta
-removeConsulta
-
-Procedimento: Armazena informações sobre os procedimentos médicos realizados no consultório.
-Atributos: nome, descricao, preco
-Métodos:
-cadastraConsulta
-listaConsulta
-editaConsulta
-removeConsulta
-
-*/
-
 import java.util.Scanner;
 
 public class Main {
 	public static void main(String args[]) {
 		
+		
 		Paciente paciente1 = new Paciente(null, null, null, null, null);
 		Medico medico1 = new Medico(null, null, null, null, null);
 		Procedimento proced1 = new Procedimento(null, null, 0);
 		Consulta consult1 = new Consulta(null, null, null);
-		
 		Scanner leitor = new Scanner(System.in);
 		
 		System.out.println("--- Bem-Vindo ---");

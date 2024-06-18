@@ -18,6 +18,9 @@ public class Consulta {
 	
 	public void agendaConsulta(Consulta consult1, String nomePaciente, String nomeMedico) {
 		
+		Paciente pac = new Paciente(nomePaciente, null, null, null, null);
+		Medico med = new Medico(nomeMedico, null, null, null, null);
+		
 		for(Paciente p : pacientes) {
 			if(!p.getNome().equals(nomePaciente)) {
 				System.out.println("Nome do Paciente não encontrado!");
@@ -36,7 +39,7 @@ public class Consulta {
 			}
 		}
 				
-		consultas.add(consult1);
+		consultas.add(new Consulta(pac, med, getData()));
 	}
 	public void listaConsulta() {
 		//Lista todas Consultas
@@ -110,10 +113,4 @@ public class Consulta {
 		return "Consulta de " + paciente.getNome() + " com o Dr. " + medico.getNome() + " foi agendada para dia " + getData() + "\n";
 
 	}
-	
-	
-	
-	
-	
-	
 }

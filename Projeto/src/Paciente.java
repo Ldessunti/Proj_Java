@@ -11,6 +11,10 @@ public class Paciente extends Pessoa{
 		this.endereco = endereco;
 	}
 	
+	public void getDetalhes() {
+		pessoasp.toString();
+	}
+	
 	public void cadastraPaciente(Paciente paciente1) {
 		//Valida se Paciente já esta adicionado
 		boolean repetido = false;
@@ -21,7 +25,7 @@ public class Paciente extends Pessoa{
 		}
 		if(!repetido) {
 			//Add Paciente
-			pessoasp.add(paciente1);
+			pessoasp.add(new Paciente(getNome(), getCpf(), getTelefone(), getEmail(), getEndereco()));
 			System.out.println(paciente1.getNome() + " foi cadastrado com sucesso!\n");
 		}else {
 			System.out.println("Paciente já cadastrado!\n");
@@ -50,20 +54,20 @@ public class Paciente extends Pessoa{
 	}
 	public boolean editaPaciente(String nomePessoa) {
 		boolean flag = false;
-        for (Pessoa p : pessoasp) {
-            if (p.getNome() == nome) {
-                flag = true;
-            }
-        }
+	        for (Pessoa p : pessoasp) {
+	            if (p.getNome() == getNome()) {
+	                flag = true;
+	            }
+	        }
         return flag;
 	}
 	public void removePaciente (String nomePessoa) {
-		for(int i = 0; i < pessoasp.size(); i++) {
-            Pessoa p = pessoasp.get(i);
-            if(p.getNome().equals(nomePessoa)) {
-                pessoasp.remove(i);
-            }
-        }
+	    for(int i = 0; i < pessoasp.size(); i++) {
+            	Pessoa p = pessoasp.get(i);
+            	if(p.getNome().equals(nomePessoa)) {
+                	pessoasp.remove(i);
+            	}
+       	    }
 	}
 	
 	public String getEndereco() {
